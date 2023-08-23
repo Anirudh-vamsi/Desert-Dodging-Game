@@ -54,7 +54,7 @@ def message_display(text):
     
 
 def crash():
-    message_display("You're Crashed!")
+    message_display("You crashed!")
 
 
 def main():
@@ -71,9 +71,9 @@ def main():
     
     STAR_X=random.randrange(0,WIDTH)
     STAR_Y=-10
-    STAR_WIDTH= 10
-    STAR_HEIGHT=20
-    STAR_VEL=3
+    STAR_WIDTH= 20
+    STAR_HEIGHT=40
+    STAR_VEL=5
 
     while run:
         elapsed_time=time.time()-start_time
@@ -118,7 +118,7 @@ def main():
 
         if y<STAR_Y+ STAR_HEIGHT:
             print('x Crossover')
-            if x<STAR_X and x< STAR_X + STAR_WIDTH or x+car_width>STAR_X and x+car_width < STAR_X+STAR_WIDTH:
+            if x>STAR_X and x< STAR_X + STAR_WIDTH or x+car_width>STAR_X and x+car_width < STAR_X+STAR_WIDTH:
                 print('x crossover')
                 crash()
         pygame.display.update()
